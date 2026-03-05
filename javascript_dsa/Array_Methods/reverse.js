@@ -3,8 +3,19 @@ fruits.reverse();
 console.log(fruits); // Output: ["orange", "banana", "apple"]
 
 
+const fruites = "nagendra";
 
-const fruites="nagendra";
+const result = fruites.split("").reverse().join("");
 
-fruites.reverse();
-console.log(fruites); // Output: TypeError: fruites.reverse is not a function
+console.log(result);
+
+
+
+const str = "nagendra";
+let reversed = "";
+
+for (let i = str.length - 1; i >= 0; i--) {
+  reversed += str[i];
+}
+
+console.log(reversed);
