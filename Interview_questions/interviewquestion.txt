@@ -1,0 +1,49 @@
+@Component({
+  selector: 'app-users',
+  template: `
+<div *ngFor="let user of users">
+      {{user.name}}
+</div>
+  `
+})
+export class UsersComponent {
+  @Input() users: any[];
+}
+------------------------------------find the issue 
+
+
+type User = {
+  name: string;
+  skills: string[];
+};
+const user1: User = {
+  name: "Ramesh",
+  skills: ["React", "TypeScript"]
+};
+const user2 = { ...user1 };
+
+console.log(user2);
+
+user2.skills.push("NodeJS");
+user2.name = "Babu";
+console.log(user1);
+console.log(user2);
+
+
+create serach input box
+--------------------------------------------------------------------
+
+type User = {
+  name: string;
+  address: { city: string };
+};
+
+const user: Readonly<User> = {
+  name: "Ramesh",
+  address: { city: "Chennai" }
+};
+
+user.address.city = "Delhi";
+console.log(user);
+
+
