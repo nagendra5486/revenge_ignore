@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()">
+
+  <input placeholder="Name" [formField]="loginForm.name">
+  <br><br>
+
+  <input placeholder="Email" [formField]="loginForm.email">
+  <br><br>
+
+  <textarea placeholder="Message" [formField]="loginForm.message"></textarea>
+  <br><br>
+
+  <button type="submit">Submit</button>
+
+</form>

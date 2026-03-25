@@ -1,37 +1,23 @@
-
-import {User} from './user_details_model';
-
+const username="NagendraVeeraVenkata";
 
 
-let user:User = {
-    name:'nagendra',
-    age:33,
-    doyouhavecar:true,
-    data:'hello',
-}
-console.log(user);
+// const data=username.split("").reverse().join("");
 
-class Person {
-    name:string;
-    age:number;
+// console.log(data);
 
-    constructor(name:string, age:number){
-        this.name=name;
-        this.age=age;
 
-    }
-        greet(){
-            console.log('helo '+this.name);
-        }
-    
+
+let reversedUsername="";
+
+for(let i=username.length-1;i>=0;i--){
+    reversedUsername+=username[i];
 }
 
-
-let p =new Person("nagendra", 33);
-
-p.greet();
+console.log(reversedUsername);
 
 
+const promise = Promise.resolve("Success");
 
-
-
+promise.then(result => {
+  console.log(result);
+});
